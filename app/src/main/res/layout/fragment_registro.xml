@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondobeige"
+    tools:context="fragment.RegistroFragment">
+
+    <ImageView
+        android:id="@+id/logoregistro"
+        android:layout_width="243dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logoregistro" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf1"
+        style="?attr/textInputFilledStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="@string/email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoregistro"
+        app:layout_constraintVertical_bias="0.2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/huesoLogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
+            app:layout_constraintVertical_bias="0.158" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf2"
+        style="?attr/textInputFilledStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintBottom_toTopOf="@+id/btnregistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tf1"
+        app:layout_constraintVertical_bias="0.052">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/huesoLogo"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/naranjaLogo"
+        android:text="@string/registrar"
+        android:textColor="@color/huesoLogo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.991" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="66dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/huesoLogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logoregistro"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@drawable/backicon" />
+
+    <ImageView
+        android:id="@+id/imagenRed"
+        android:layout_width="78dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/tf1"
+        app:layout_constraintEnd_toStartOf="@+id/imagenChica"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoregistro"
+        app:layout_constraintVertical_bias="0.22"
+        app:srcCompat="@drawable/chansey" />
+
+    <ImageView
+        android:id="@+id/imagenChica"
+        android:layout_width="105dp"
+        android:layout_height="124dp"
+        app:layout_constraintBottom_toTopOf="@+id/tf1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoregistro"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/staryu" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="296dp"
+        android:layout_height="131dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:theme="@style/CustomTransparentDatePickerTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tf2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/facebookButton"
+        android:layout_width="190dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnregistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        app:layout_constraintVertical_bias="0.122"
+        app:srcCompat="@drawable/facebookregisterbueno" />
+
+    <ImageButton
+        android:id="@+id/googleButton"
+        android:layout_width="190dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnregistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facebookButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/googleregisterbueno" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

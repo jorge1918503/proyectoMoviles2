@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="google">#E17575</color>
+    <color name="facebook">#6666FF</color>
+    <color name="azulLogo">#001AFE</color>
+    <color name="naranjaLogo">#EE6811</color>
+    <color name="huesoLogo">#FFE6B9</color>
+    <color name="rojoFondo">#c5140e</color>
+    <color name="rositaFondo">#ffe9e1</color>
+    <color name="rosaItem">#fcafb0</color>
+    <color name="negroPikachu">#4c494d</color>
+</resources>
