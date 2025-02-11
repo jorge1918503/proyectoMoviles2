@@ -17,4 +17,5 @@
     <string name="wasap">Mensaje al 968 30 62 43</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_image">Usuario</string>
 </resources>
