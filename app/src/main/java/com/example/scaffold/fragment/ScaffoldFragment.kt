@@ -69,7 +69,8 @@ class ScaffoldFragment : Fragment()
 
         val toggle = ActionBarDrawerToggle(
             requireActivity(), binding.drawerLayout, binding.toolbar,
-            R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            R.string.user, R.string.registrar
+        )
 
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
