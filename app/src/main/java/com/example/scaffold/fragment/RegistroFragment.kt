@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.scaffold.R
 import com.example.scaffold.databinding.FragmentRegistroBinding
@@ -66,9 +67,7 @@ class RegistroFragment : Fragment() {
             }
 
             if (isValid) {
-                // Intent para abrir ActivityFavoritos
-                //val intent = Intent(requireContext(), FavoritosActivity::class.java)
-                //startActivity(intent)
+                findNavController().navigate(R.id.action_RegistroFragment_to_ScaffoldFragment)
             }
         }
 

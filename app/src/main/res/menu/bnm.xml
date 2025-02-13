@@ -1,14 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-            android:id="@+id/bnm_home"
+            android:id="@+id/bnm_pokes"
             android:icon="@drawable/ic_home"
-            android:title="Home" />
+            android:title="Pokemons" />
     <item
-            android:id="@+id/bnm_dashboard"
+            android:id="@+id/bnm_favs"
             android:icon="@drawable/ic_dashboard"
-            android:title="Dashboard" />
+            android:title="Favoritos" />
     <item
-            android:id="@+id/bnm_notifications"
+            android:id="@+id/bnm_contacto"
             android:icon="@drawable/ic_notifications"
-            android:title="Notifications" />
+            android:title="Contacto" />
 </menu>

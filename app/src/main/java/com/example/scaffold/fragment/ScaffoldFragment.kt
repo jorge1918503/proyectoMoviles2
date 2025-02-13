@@ -9,6 +9,8 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.example.scaffold.R
 import com.example.scaffold.databinding.FragmentScaffoldBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -38,6 +40,9 @@ class ScaffoldFragment : Fragment()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState)
+
+        val navHostFragment = childFragmentManager.findFragmentById(R.id.FragmentContainerScaffold) as NavHostFragment
+        val navController = navHostFragment.navController
 
         /* TOOLBAR */
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
@@ -79,16 +84,16 @@ class ScaffoldFragment : Fragment()
 
             item -> when(item.itemId)
                     {
-                            R.id.nav_home -> {
+                            R.id.drawer_pokes -> {
                                 true
                             }
 
-                            R.id.nav_dashboard -> {
+                            R.id.drawer_favs -> {
 
                                 true
                             }
 
-                            R.id.nav_notifications -> {
+                            R.id.drawer_contacto -> {
                                 true
                             }
 
@@ -101,16 +106,16 @@ class ScaffoldFragment : Fragment()
         binding.bottomNavigation.setOnItemSelectedListener {
             item ->
                         when (item.itemId) {
-                            R.id.bnm_home -> {
-                                // Handle Home navigation
+                            R.id.bnm_pokes -> {
+                                binding.FragmentContainerScaffold.findNavController().navigate(R.id.FavoritosFragment)
                                 true
                             }
-                            R.id.bnm_dashboard -> {
-                                // Handle Dashboard navigation
+                            R.id.bnm_favs -> {
+                                binding.FragmentContainerScaffold.findNavController().navigate(R.id.FavoritosFragment)
                                 true
                             }
-                            R.id.bnm_notifications -> {
-                                // Handle Notifications navigation
+                            R.id.bnm_contacto -> {
+                                binding.FragmentContainerScaffold.findNavController().navigate(R.id.ContactoFragment)
                                 true
                             }
                             else -> false

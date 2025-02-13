@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.scaffold.R
 import com.example.scaffold.databinding.FragmentLoginBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -29,9 +31,7 @@ class LoginFragment : Fragment() {
 
         // Botón registrar que lleva a la pantalla de registro
         binding.registrar.setOnClickListener {
-            // Intent para abrir ActivityRegistro
-            //val intentRegistro = Intent(requireContext(), RegistroActivity::class.java)
-            //startActivity(intentRegistro)
+            findNavController().navigate(R.id.action_LoginFragment_to_RegistroFragment)
         }
 
         binding.backButton.setOnClickListener {
@@ -86,9 +86,7 @@ class LoginFragment : Fragment() {
             }
 
             if (isValid) {
-                // Intent para abrir ActivityFavoritos
-                //val intent = Intent(requireContext(), FavoritosActivity::class.java)
-                //startActivity(intent)
+                findNavController().navigate(R.id.action_LoginFragment_to_ScaffoldFragment)
             }
         }
     }

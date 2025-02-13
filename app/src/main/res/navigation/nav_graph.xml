@@ -37,6 +37,9 @@
         android:name="com.example.scaffold.fragment.RegistroFragment"
         android:label="Registro Fragment"
         tools:layout="@layout/fragment_registro">
+        <action
+            android:id="@+id/action_RegistroFragment_to_ScaffoldFragment"
+            app:destination="@id/ScaffoldFragment"/>
     </fragment>
 
 </navigation>
