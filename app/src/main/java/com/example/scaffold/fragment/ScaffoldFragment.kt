@@ -107,7 +107,7 @@ class ScaffoldFragment : Fragment()
             item ->
                         when (item.itemId) {
                             R.id.bnm_pokes -> {
-                                binding.FragmentContainerScaffold.findNavController().navigate(R.id.FavoritosFragment)
+                                binding.FragmentContainerScaffold.findNavController().navigate(R.id.ListaFragment)
                                 true
                             }
                             R.id.bnm_favs -> {

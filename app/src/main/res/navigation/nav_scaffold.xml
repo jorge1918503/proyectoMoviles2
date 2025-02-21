@@ -6,6 +6,13 @@
     app:startDestination="@id/FavoritosFragment">
 
     <fragment
+        android:id="@+id/ListaFragment"
+        android:name="com.example.scaffold.fragment.ListaFragment"
+        android:label="Lista Fragment"
+        tools:layout="@layout/fragment_lista" >
+    </fragment>
+
+    <fragment
         android:id="@+id/FavoritosFragment"
         android:name="com.example.scaffold.fragment.FavoritosFragment"
         android:label="Favoritos Fragment"
