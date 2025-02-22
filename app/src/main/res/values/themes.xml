@@ -17,4 +17,8 @@
     </style>
 
     <style name="Theme.Scaffold" parent="Base.Theme.Scaffold"/>
+
+    <style name="Theme.Splash" parent="Base.Theme.Scaffold">
+        <item name="windowSplashScreenBackground">@color/huesoLogo</item>
+    </style>
 </resources>

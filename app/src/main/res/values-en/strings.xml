@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pokemón PC</string>
+    <string name="inicioSesion">Log In</string>"
+    <string name="user">User</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="inicioDeSesion">Log In</string>
+    <string name="olvidar">Forgott the passworc?</string>
+    <string name="registrate">Sign Up</string>
+    <string name="nocuenta">don´t have an account?</string>
+    <string name="registro">Register</string>
+    <string name="registrar">Sig Up</string>
+    <string name="contacto">Contact</string>
+    <string name="llamar">Call 968 30 62 43</string>
+    <string name="enviaremail">pokemonbank@gmail.com</string>
+    <string name="ubicacion">C/ Carlos III, 3 Cartagena</string>
+    <string name="wasap">Message to 968 30 62 43</string>
+    <string name="user_image">User</string>
+    <string name="cerrarSesion">Log Out</string>
+</resources>

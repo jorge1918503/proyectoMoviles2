@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Splash" parent="Base.Theme.Scaffold">
+        <!-- Color de fondo del Splash Screen -->
+        <item name="windowSplashScreenBackground">@color/huesoLogo</item>
+        <!-- Ícono animado del Splash Screen -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/pokemonbankgrande</item>
+        <!-- Duración del ícono animado (opcional) -->
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <!-- Mantenemos la compatibilidad para la barra de estado -->
+        <item name="postSplashScreenTheme">@style/Theme.Scaffold</item>
+    </style>
+
+</resources>

@@ -3,7 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_scaffold.xml"
-    app:startDestination="@id/FavoritosFragment">
+    app:startDestination="@id/ListaFragment">
+
+    <fragment
+        android:id="@+id/scaffoldFragment"
+        android:name="com.example.scaffold.fragment.ScaffoldFragment"
+        android:label="ScaffoldFragment">
+        <action
+            android:id="@+id/action_to_favoritosFragment"
+            app:destination="@id/FavoritosFragment" />
+        <action
+            android:id="@+id/action_to_listaFragment"
+            app:destination="@id/ListaFragment" />
+        <action
+            android:id="@+id/action_to_contactoFragment"
+            app:destination="@id/ContactoFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/ListaFragment"

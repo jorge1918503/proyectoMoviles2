@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.scaffold.ItemAdapter
 import com.example.scaffold.ItemPokemon
 import com.example.scaffold.databinding.FragmentListaBinding
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
@@ -21,7 +23,7 @@ class ListaFragment : Fragment() {
     private lateinit var binding: FragmentListaBinding
     private lateinit var adapter: ItemAdapter
     private var pokemonsLista = mutableListOf<ItemPokemon>()
-    val db = Firebase.firestore
+    private val db = Firebase.firestore
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,7 +50,7 @@ class ListaFragment : Fragment() {
 
             binding.rv.visibility = View.VISIBLE
 
-            setupSearchView()
+            //setupSearchView()
 
         }
     }
@@ -60,9 +62,9 @@ class ListaFragment : Fragment() {
             .addOnSuccessListener { documents ->
                 for (document in documents) {
                     val pokemon = ItemPokemon(
-                        document.getString("nombre") ?: "",
-                        document.getInt("imagen") ?: 0,
-                        document.getInt("nEstrellas") ?: 0,
+                        document.getString("titulo") ?: "",
+                        document.getLong("imagen")?.toInt() ?: 0,
+                        document.getLong("nEstrellas")?.toInt() ?: 0,
                         document.getBoolean("fav") ?: false
                     )
                     pokemonsLista.add(pokemon)
@@ -85,22 +87,22 @@ class ListaFragment : Fragment() {
         binding.rv.adapter = adapter
     }
 
-    private fun setupSearchView() {
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                filtrarPokemons(newText.orEmpty())
-                return true
-            }
-        })
-    }
-
-    private fun filtrarPokemons(query: String) {
-        val listaFiltrada = pokemonsLista.filter { it.titulo.contains(query, ignoreCase = true) }
-        adapter.actualizarLista(listaFiltrada)
-    }
+//    private fun setupSearchView() {
+//        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+//            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+//            override fun onQueryTextSubmit(query: String?): Boolean {
+//                return false
+//            }
+//
+//            override fun onQueryTextChange(newText: String?): Boolean {
+//                filtrarPokemons(newText.orEmpty())
+//                return true
+//            }
+//        })
+//    }
+//
+//    private fun filtrarPokemons(query: String) {
+//        val listaFiltrada = pokemonsLista.filter { it.titulo.contains(query, ignoreCase = true) }
+//        adapter.actualizarLista(listaFiltrada)
+//    }
 }

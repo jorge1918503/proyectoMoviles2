@@ -5,8 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemAdapter">
+    tools:context=".ItemAdapter"
+    tools:ignore="MissingClass">
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
@@ -23,15 +28,20 @@
         app:layout_constraintVertical_bias="0.987"
         tools:listitem="@layout/layout_item" />
 
+
+
     <ProgressBar
         android:id="@+id/pbfavoritos"
         style="?android:attr/progressBarStyle"
         android:layout_width="77dp"
         android:layout_height="72dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
